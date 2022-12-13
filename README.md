@@ -6,7 +6,7 @@ In the Wordpress dashboard theme customisation panel there are a few custiomisat
 
 ### Footer
 This menu can be used to display and link various information:
-- Copywright
+- Copyright
 - Disclaimer
 - Webwright email address
 - Seneschal email address

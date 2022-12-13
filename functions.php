@@ -181,6 +181,20 @@ function stFlorian_setup() {
 			'priority' => 10, // Before Widgets.
 		) );
 
+		$wp_customize->add_setting( 'heavy_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'heavy_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'heavy_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
+		) );
+
 		$wp_customize->add_setting( 'heavy_name',
 			array(
 				'default' => '',
@@ -224,6 +238,20 @@ function stFlorian_setup() {
 			'title' => __( 'Fencing Champion', 'stFlorian' ),
 			'panel' => 'champion_panel',
 			'priority' => 20, // Before Widgets.
+		) );
+
+		$wp_customize->add_setting( 'fencing_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'fencing_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'fencing_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
 		) );
 
 		$wp_customize->add_setting( 'fencing_name',
@@ -271,6 +299,20 @@ function stFlorian_setup() {
 			'priority' => 30, // Before Widgets.
 		) );
 
+		$wp_customize->add_setting( 'archery_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'archery_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'archery_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
+		) );
+
 		$wp_customize->add_setting( 'archery_name',
 			array(
 				'default' => '',
@@ -314,6 +356,20 @@ function stFlorian_setup() {
 			'title' => __( 'A&S Champion', 'stFlorian' ),
 			'panel' => 'champion_panel',
 			'priority' => 40, // Before Widgets.
+		) );
+
+		$wp_customize->add_setting( 'arts_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'arts_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'arts_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
 		) );
 
 		$wp_customize->add_setting( 'arts_name',
@@ -361,6 +417,20 @@ function stFlorian_setup() {
 			'priority' => 50, // Before Widgets.
 		) );
 
+		$wp_customize->add_setting( 'baroness_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'baroness_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'baroness_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
+		) );
+
 		$wp_customize->add_setting( 'baroness_name',
 			array(
 				'default' => '',
@@ -388,6 +458,65 @@ function stFlorian_setup() {
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'baroness_pic', array(
 			'priority' => 20, // Within the section.
 			'section' => 'baroness_section', // Required, core or custom.
+			'label' => __( 'Champion Portrait' ),
+			'button_labels' => array( // Optional.
+				'select' => __( 'Select Image' ),
+				'change' => __( 'Change Image' ),
+				'remove' => __( 'Remove' ),
+				'default' => __( 'Default' ),
+				'placeholder' => __( 'No image selected' ),
+				'frame_title' => __( 'Select Image' ),
+				'frame_button' => __( 'Choose Image' ),
+			)
+		) ) );
+
+		$wp_customize->add_section( 'barons_section' , array(
+			'title' => __( 'Baron&rsquo;s Champion', 'stFlorian' ),
+			'panel' => 'champion_panel',
+			'priority' => 50, // Before Widgets.
+		) );
+
+		$wp_customize->add_setting( 'baron_show',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'baron_show', array(
+			'type' => 'checkbox',
+			'priority' => 10, // Within the section.
+			'section' => 'barons_section', // Required, core or custom.
+			'label' => __( 'Champion Active' )
+		) );
+
+		$wp_customize->add_setting( 'barons_name',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( 'barons_name', array(
+			'type' => 'text',
+			'priority' => 10, // Within the section.
+			'section' => 'barons_section', // Required, core or custom.
+			'label' => __( 'Champion Name' ),
+			'input_attrs' => array( // Optional.
+				'placeholder' => __( 'Enter name...' ),
+		      ),
+		) );
+
+		$wp_customize->add_setting( 'barons_pic',
+			array(
+				'default' => '',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses'
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'barons_pic', array(
+			'priority' => 20, // Within the section.
+			'section' => 'barons_section', // Required, core or custom.
 			'label' => __( 'Champion Portrait' ),
 			'button_labels' => array( // Optional.
 				'select' => __( 'Select Image' ),

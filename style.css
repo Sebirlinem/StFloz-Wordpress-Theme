@@ -1,10 +1,10 @@
 /*
 Theme Name: stFlorian
-Theme URI: http://www.lochac.sca.org/st_florians
+Theme URI: https://github.com/Sebirlinem/StFloz-Wordpress-Theme
 Description: Custom theme for St Florian website
-Version: 1.0
+Version: 3.0
 Author: Sebastian Peters
-Author URI: http://www.sebirlinem.com
+Author URI: https://github.com/Sebirlinem
 */
 
 /* 
@@ -103,7 +103,7 @@ header:after{clear:both;content:"";display:block;height:0px;}
 .imageSubtext, .imageSubtextTitle{font: 1.6em 'prince_valiantregular';text-align: center;}
 .imageSubtextTitle{font-size:2em;padding-top:10px;}
 .champCont{text-align:center;}
-.championBlock{width:19%;display:inline-block;padding:10px;text-align:center;vertical-align: top;}
+.championBlock{width:16%;display:inline-block;padding:10px;text-align:center;vertical-align: top;}
 .championBlock img{width:100%;margin-bottom:10px;max-width:200px;}
 .champion{font-family:'prince_valiantregular';font-size:1.1em;height:35px;line-height:1.5;}
 .champTitle{display:block;vertical-align: bottom;}
@@ -172,8 +172,8 @@ th.office, th.officer, th.warrant {font-family: "prince_valiantregular"; font-si
 th.badge {padding-right: 10px;}
 .canon-star {max-width: 20px;}
 
-.champions {}
-.heavy, .fencing, .archery, .arts, .baroness {display: inline-block; width: 20%; padding: 0 15px 0 15px;}
+.champions {text-align: center;}
+.heavy, .fencing, .archery, .arts, .baroness, .baron {display: inline-block; width: 16%; margin-left:auto; margin-right:auto; padding: 0 15px 0 15px;}
 .champ_title {font-weight: bold; padding-bottom: 10px; text-align: center;}
 .champ_pic {width: 100%;}
 .champ_name {padding-top: 5px; text-align: center;}
